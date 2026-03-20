@@ -1,0 +1,247 @@
+:root{
+  --section: #F7F4EF;
+  --color-primary: #DBBB51;
+  --color-secondary: #A89760;
+  --color-shadow: #332F20;
+  --color-btn-secondary: #424037;
+  --color-background: #756F5A;
+  --color-gradient-text: linear-gradient(90deg, #F45B4F, #F5A623);
+  --color-gradient-bg-2: linear-gradient(180deg ,var(--color-btn-secondary),var(--color-background))
+}
+
+*{
+    margin-inline: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.hero {
+  height: 60vh;
+  background: var(--section);
+  display: flex;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.hero-text {
+  max-width: 500px;
+  margin-inline: 50px;
+}
+
+.hero-text h1 {
+  font-family: 'Style Script', cursive;
+  font-size: 80px;
+
+  background: var(--color-gradient-text);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #333;
+  font-size: 30px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  background: var(--color-gradient-text);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 2px solid #F45B4F !important;
+  background: transparent !important;
+  color: #F45B4F !important;
+  cursor: pointer;
+}
+
+
+.hero-image {
+  width: 300px;
+  height: 300px;
+  margin-inline: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.blob {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 58% 42% 70% 30% / 30% 30% 70% 70%;
+  overflow: hidden;
+
+  background: #fff;
+}
+
+.blob img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: scale(1.2) translateY(-20px);
+}
+
+@keyframes blobAnim {
+  0% {
+    border-radius: 58% 42% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 40% 60% 50% 50% / 60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 58% 42% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+.blob {
+  animation: blobAnim 8s infinite ease-in-out;
+}
+
+.portfolio{
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #F7F4EF;
+    background: linear-gradient(180deg, rgba(247, 244, 239, 1) 0%, rgba(247, 228, 197, 1) 28%, rgba(245, 166, 35, 1) 63%);
+    padding: 25px;
+}
+
+.portfolio h1{
+    width: 100%;
+    padding: 20px 5%;
+    font-size: 60px;
+    text-align: center;
+    background: var(--color-gradient-text);
+    background-clip: text;
+    color: transparent;
+  
+
+}
+.portfolio hr{
+  color: var(--color-shadow);
+  width: 600px;
+  margin-top: -40px;
+  height: 10px;
+  box-shadow: 2px 2px var(--color-shadow);
+}
+.port-imgs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding:0 5%;
+    object-fit: cover;
+}
+.card-photo{
+    min-height: 350px;
+    max-height: 600px;
+    margin: 10px;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 3px 3px 10px var(--color-shadow);
+    background: var(--color-gradient-text);
+    transition: transform 0.3s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+}
+
+.sobre{
+    padding: 20px 5%;
+    height: 450px;
+    background: #F5A623;
+    background: linear-gradient(180deg, rgba(245, 166, 35, 1) 0%, rgba(244, 91, 79, 1) 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre .card{
+  border-radius: 15px;
+  box-shadow: 3px 3px 15px var(--color-shadow);
+  background: #F7F4EF77;
+}
+
+.sobre .card-title{
+  font-size: 48px;
+  font-family: 'Style Script', cursive;
+}
+
+.sobre .card{
+  padding: 20px;
+}
+
+.sobre .card-text{
+  font-size: 26px;
+  text-align: justify !important;
+  font-style: normal;
+}
+
+.sobre .img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sobre .img-perfil{
+  height: 300px;
+  object-fit: fill;
+  clip-path: circle();
+}
+
+.contato{
+    height: 60vh;
+    background: #F45B4F;
+    padding: 0 5%;
+}
+
+.contato h1{
+  color: #F7F4EF;
+}
+.contato .divisor{
+  margin-top: -10px;
+  width: 100px;
+  background-color: var(--section);
+  height: 4px;
+}
+
+
